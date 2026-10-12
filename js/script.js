@@ -10,7 +10,7 @@ function handleFormSubmit(e) {
   const telefono = document.getElementById('telefono').value.trim();
   const mensaje = document.getElementById('mensaje').value.trim();
 
-  // Códigos exactos de emojis para WhatsApp
+  // Emojis con codificación segura
   const icoPastel = "\u{1F370}"; // 🍰
   const icoPersona = "\u{1F464}"; // 👤
   const icoFono = "\u{1F4F1}";    // 📱
@@ -35,21 +35,42 @@ function handleFormSubmit(e) {
 }
 
 // ==========================================
-// 2. CIERRE AUTOMÁTICO DEL MENÚ EN MÓVILES
+// 2. CIERRE AUTOMÁTICO DEL MENÚ (CLICK Y SCROLL)
 // ==========================================
 document.addEventListener('DOMContentLoaded', function () {
-  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
   const menuColapsable = document.getElementById('navContent');
+  if (!menuColapsable) return;
 
-  if (menuColapsable) {
-    navLinks.forEach(function (link) {
-      link.addEventListener('click', function () {
-        // Cierra el menú solo si está abierto en móviles/tablets
-        if (menuColapsable.classList.contains('show')) {
-          const bsCollapse = bootstrap.Collapse.getInstance(menuColapsable) || new bootstrap.Collapse(menuColapsable);
-          bsCollapse.hide();
-        }
-      });
-    });
+  // Función auxiliar para cerrar el menú si está abierto
+  function cerrarMenu() {
+    if (menuColapsable.classList.contains('show')) {
+      const instancia = bootstrap.Collapse.getInstance(menuColapsable);
+      if (instancia) {
+        instancia.hide();
+      } else {
+        new bootstrap.Collapse(menuColapsable, { toggle: false }).hide();
+      }
+    }
   }
+
+  // 1. Cerrar al hacer clic en cualquier opción o botón del menú
+  const itemsMenu = menuColapsable.querySelectorAll('.nav-link, a, button');
+  itemsMenu.forEach(function (item) {
+    item.addEventListener('click', function () {
+      cerrarMenu();
+    });
+  });
+
+  // 2. Cerrar automáticamente cuando el usuario hace SCROLL (desliza la pantalla)
+  window.addEventListener('scroll', function () {
+    cerrarMenu();
+  }, { passive: true });
+
+  // 3. Cerrar si el usuario hace clic/toque en cualquier parte fuera del menú
+  document.addEventListener('click', function (e) {
+    const navbar = document.querySelector('.navbar');
+    if (navbar && !navbar.contains(e.target)) {
+      cerrarMenu();
+    }
+  });
 });
