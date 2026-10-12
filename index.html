@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katherin Pasteleria - Pastelería Artesanal</title>
+  
+  <!-- Google Fonts: Playfair Display y Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80">
+
+  <!-- 1. BARRA DE NAVEGACIÓN -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top py-3">
+    <div class="container">
+      
+      <!-- LOGO -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+        <img src="img/logo.jpeg" width="45" height="45" class="rounded-circle" alt="Logo Katherin Pasteleria"> 
+        <span class="fw-bold fs-4 brand-font" style="color: var(--secondary-color);">Katherin Pasteleria</span>
+      </a>
+
+      <!-- Botón Hamburguesa para Móviles -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Enlaces del Menú -->
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3">
+          <li class="nav-item">
+            <a class="nav-link active" href="#inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#catalogo">Catálogo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#nosotros">Sobre Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#opiniones">Opiniones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+
+        <!-- Botón de WhatsApp Directo -->
+        <div class="d-flex">
+          <a target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp px-4 py-2 shadow-sm d-flex align-items-center gap-2" href="https://wa.me/51922803900?text=Hola,%20quiero%20hacer%20un%20pedido%20de%20la%20pasteleria">
+            <i class="bi bi-whatsapp fs-5"></i>
+            <span>Realizar pedido</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 2. SECCIÓN HERO -->
+  <header id="inicio" class="hero-section">
+    <div class="container py-lg-5">
+      <div class="row align-items-center gy-5">
+        
+        <div class="col-lg-6 text-center text-lg-start">
+          <span class="badge px-3 py-2 rounded-pill mb-3" style="background-color: #ffd8e2; color: #a12b4b; font-weight: 600;">
+            🍰 100% Hechos con amor
+          </span>
+          <h1 class="display-4 fw-bold mb-3" style="color: var(--secondary-color); line-height: 1.2;">
+            Presentes en tus momentos más importantes
+          </h1>
+          <p class="lead text-muted mb-4">
+            Horneamos pasteles personalizados y postres finos con los ingredientes de la más alta calidad para celebrar tus momentos especiales.
+          </p>
+          <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3">
+            <a href="#catalogo" class="btn btn-pasteleria px-4 py-3 rounded-pill shadow-sm">
+              Ver Catálogo de Postres
+            </a>
+            <a href="#contacto" class="btn btn-outline-dark px-4 py-3 rounded-pill">
+              Hacer Pedido Personalizado
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="position-relative mx-auto" style="max-width: 500px;">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" 
+                 alt="Pastel Estrella de Chocolate y Frutos Rojos" 
+                 class="img-fluid rounded-4 shadow-lg w-100" 
+                 onerror="this.src='https://placehold.co/600x600/f8d7da/842029?text=Pastel+Estrella'">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. SECCIÓN CATÁLOGO / PRODUCTOS DESTACADOS -->
+  <section id="catalogo" class="py-5 my-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="text-uppercase fw-semibold" style="color: var(--primary-color); letter-spacing: 2px;">Nuestras Creaciones</span>
+        <h2 class="display-5 fw-bold" style="color: var(--secondary-color);">Pasteles y Postres Destacados</h2>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+          Elige tu tentación favorita o contáctanos para personalizar el diseño y sabor a tu gusto.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        
+        <!-- PRODUCTO 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 product-card shadow-sm">
+            <div class="overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Tarta de Frutilla y Crema" onerror="this.src='https://placehold.co/600x400/fae8ee/6d4c41?text=Tarta+Frutilla'">
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h5 class="card-title fw-bold mb-0">Tarta de Frutilla & Vainilla</h5>
+                <span class="badge bg-success-subtle text-success fs-6 fw-bold">S/99.99</span>
+              </div>
+              <p class="card-text text-muted flex-grow-1">
+                Bizcocho suave de vainilla relleno con crema chantilly ligera y frutillas frescas de temporada.
+              </p>
+              <a target="_blank" rel="noopener noreferrer" class="btn btn-outline-danger w-100 rounded-pill mt-3" href="https://wa.me/51922803900?text=Hola,%20quiero%20consultar%20por%20la%20Tarta%20de%20Frutilla%20y%20Vainilla">
+                <i class="bi bi-cart-plus me-1"></i> Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PRODUCTO 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 product-card shadow-sm">
+            <div class="overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Pastel de Chocolate Intenso" onerror="this.src='https://placehold.co/600x400/fae8ee/6d4c41?text=Pastel+Chocolate'">
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h5 class="card-title fw-bold mb-0">Choco Delicia Gourmet</h5>
+                <span class="badge bg-success-subtle text-success fs-6 fw-bold">S/99.00</span>
+              </div>
+              <p class="card-text text-muted flex-grow-1">
+                Capas de bizcocho húmedo de cacao al 70%, ganache de chocolate belga y trufa artesanal.
+              </p>
+              <a target="_blank" rel="noopener noreferrer" class="btn btn-outline-danger w-100 rounded-pill mt-3" href="https://wa.me/51922803900?text=Hola,%20quiero%20consultar%20por%20el%20Pastel%20Choco%20Delicia%20Gourmet">
+                <i class="bi bi-cart-plus me-1"></i> Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PRODUCTO 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 product-card shadow-sm">
+            <div class="overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Caja de Cupcakes Variados" onerror="this.src='https://placehold.co/600x400/fae8ee/6d4c41?text=Cupcakes+Variados'">
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h5 class="card-title fw-bold mb-0">Caja Cupcakes x 6</h5>
+                <span class="badge bg-success-subtle text-success fs-6 fw-bold">S/18.00</span>
+              </div>
+              <p class="card-text text-muted flex-grow-1">
+                Surtido de cupcakes: Red Velvet, Zanahoria con frosting de queso crema y Choco-Caramelo.
+              </p>
+              <a target="_blank" rel="noopener noreferrer" class="btn btn-outline-danger w-100 rounded-pill mt-3" href="https://wa.me/51922803900?text=Hola,%20quiero%20consultar%20por%20la%20Caja%20de%20Cupcakes%20x6">
+                <i class="bi bi-cart-plus me-1"></i> Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SECCIÓN SOBRE NOSOTROS -->
+  <section id="nosotros" class="py-5 bg-white">
+    <div class="container py-4">
+      <div class="row align-items-center gy-5">
+        
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80" 
+                 alt="Chef pastelera decorando" 
+                 class="img-fluid rounded-4 shadow w-100" 
+                 onerror="this.src='https://placehold.co/600x500/f3e5eb/6d4c41?text=Nuestro+Taller'">
+          </div>
+        </div>
+
+        <div class="col-lg-6 ps-lg-5">
+          <span class="text-uppercase fw-semibold" style="color: var(--primary-color); letter-spacing: 2px;">Nuestra Pasión</span>
+          <h2 class="display-5 fw-bold mb-4" style="color: var(--secondary-color);">Horneando Tradición con Toque Moderno</h2>
+          <p class="text-muted leading-relaxed">
+            En <strong>Katherin Pasteleria</strong>, creemos que la pastelería es el arte de transformar ingredientes sencillos en recuerdos imborrables. Nacimos como un emprendimiento con la misión de brindar repostería honesta, fresca y elaborada a mano cada mañana.
+          </p>
+          
+          <div class="row g-4 mt-2">
+            <div class="col-sm-6">
+              <div class="d-flex align-items-start gap-3">
+                <div class="p-2 rounded-circle bg-danger-subtle text-danger">
+                  <i class="bi bi-heart-fill fs-4"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Amor al Detalle</h6>
+                  <small class="text-muted">Diseños hechos a mano cuidando cada flor y trazo de crema.</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="d-flex align-items-start gap-3">
+                <div class="p-2 rounded-circle bg-warning-subtle text-warning">
+                  <i class="bi bi-award-fill fs-4"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Ingredientes de calidad</h6>
+                  <small class="text-muted">Mantequilla pura, frutas frescas y chocolates de calidad comprobada.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. SECCIÓN TESTIMONIOS -->
+  <section id="opiniones" class="py-5 my-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="text-uppercase fw-semibold" style="color: var(--primary-color); letter-spacing: 2px;">Clientes Felices</span>
+        <h2 class="display-5 fw-bold" style="color: var(--secondary-color);">Lo que dicen de nosotros</h2>
+      </div>
+
+      <div class="row g-4">
+        <!-- Testimonio 1 -->
+        <div class="col-md-4">
+          <div class="p-4 testimonial-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="text-warning mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="fst-italic text-muted">
+                "Pedí el pastel de cumpleaños para mi hija con diseño personalizado y superó todas mis expectativas. El sabor a chocolate belga era exquisito y la decoración impecable."
+              </p>
+            </div>
+            <div class="d-flex align-items-center gap-3 mt-4 pt-3 border-top">
+              <div class="rounded-circle bg-secondary-subtle d-flex align-items-center justify-content-center text-secondary fw-bold" style="width: 45px; height: 45px;">
+                MC
+              </div>
+              <div>
+                <h6 class="mb-0 fw-bold">Mariana Castro</h6>
+                <small class="text-muted">Cumpleaños familiar</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 2 -->
+        <div class="col-md-4">
+          <div class="p-4 testimonial-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="text-warning mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="fst-italic text-muted">
+                "Los cupcakes son una adicción. La masa es súper esponjosa y el frosting no es empalagoso. La atención por WhatsApp fue muy rápida y puntual en el delivery."
+              </p>
+            </div>
+            <div class="d-flex align-items-center gap-3 mt-4 pt-3 border-top">
+              <div class="rounded-circle bg-secondary-subtle d-flex align-items-center justify-content-center text-secondary fw-bold" style="width: 45px; height: 45px;">
+                LR
+              </div>
+              <div>
+                <h6 class="mb-0 fw-bold">Luis Ramírez</h6>
+                <small class="text-muted">Cliente recurrente</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 3 -->
+        <div class="col-md-4">
+          <div class="p-4 testimonial-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="text-warning mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="fst-italic text-muted">
+                "Excelente relación precio-calidad. Es difícil encontrar postres artesanales con este nivel de frescura y presentación tan cuidada. Totalmente recomendados."
+              </p>
+            </div>
+            <div class="d-flex align-items-center gap-3 mt-4 pt-3 border-top">
+              <div class="rounded-circle bg-secondary-subtle d-flex align-items-center justify-content-center text-secondary fw-bold" style="width: 45px; height: 45px;">
+                SV
+              </div>
+              <div>
+                <h6 class="mb-0 fw-bold">Sofía Vargas</h6>
+                <small class="text-muted">Mesa de postres para boda</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. SECCIÓN CONTACTO Y PEDIDOS -->
+  <section id="contacto" class="py-5 bg-white">
+    <div class="container py-4">
+      <div class="row gy-5">
+        
+        <!-- Formulario -->
+        <div class="col-lg-7">
+          <div class="p-4 p-md-5 rounded-4 border bg-white shadow-sm">
+            <h3 class="fw-bold mb-3" style="color: var(--secondary-color);">Escríbenos o Haz tu Pedido</h3>
+            <p class="text-muted mb-4">Completa el formulario y se enviará directamente a nuestro WhatsApp para cotizar tu pedido.</p>
+            
+            <form id="contactForm" onsubmit="handleFormSubmit(event)">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="nombre" class="form-label small fw-semibold">Nombre Completo</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="Ej: María Gómez" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="telefono" class="form-label small fw-semibold">Teléfono / Celular</label>
+                  <input type="tel" class="form-control" id="telefono" placeholder="Ej: 987654321" required>
+                </div>
+                <div class="col-12">
+                  <label for="correo" class="form-label small fw-semibold">Correo Electrónico</label>
+                  <input type="email" class="form-control" id="correo" placeholder="nombre@correo.com" required>
+                </div>
+                <div class="col-12">
+                  <label for="mensaje" class="form-label small fw-semibold">¿Qué postre deseas cotizar o consultar?</label>
+                  <textarea class="form-control" id="mensaje" rows="4" placeholder="Ej: Me gustaría un pastel para 20 personas con temática de flores para este sábado..." required></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-pasteleria w-100 py-3 rounded-pill fw-bold">
+                    <i class="bi bi-whatsapp me-2"></i> Enviar Consulta a WhatsApp
+                  </button>
+                </div>
+              </div>
+            </form>
+            
+            <!-- Mensaje de confirmación temporal -->
+            <div id="formSuccess" class="alert alert-success mt-3 d-none" role="alert">
+              ¡Redirigiendo a WhatsApp con los datos de tu pedido...!
+            </div>
+          </div>
+        </div>
+
+        <!-- Información de contacto -->
+        <div class="col-lg-5 d-flex flex-column justify-content-center">
+          <div class="ps-lg-4">
+            <h4 class="fw-bold mb-4" style="color: var(--secondary-color);">Visítanos o Escríbenos</h4>
+            
+            <div class="d-flex align-items-start gap-3 mb-4">
+              <div class="p-3 bg-danger-subtle text-danger rounded-circle">
+                <i class="bi bi-geo-alt-fill fs-5"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">Ubicación</h6>
+                <p class="text-muted mb-0">Av 200 Mz. C Lt. 1 Pachacutec-Ventanilla</p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-3 mb-4">
+              <div class="p-3 bg-danger-subtle text-danger rounded-circle">
+                <i class="bi bi-telephone-fill fs-5"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">Teléfono y Pedidos</h6>
+                <p class="text-muted mb-0">+51 922 803 900</p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-3 mb-4">
+              <div class="p-3 bg-danger-subtle text-danger rounded-circle">
+                <i class="bi bi-clock-fill fs-5"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">Horario de Atención</h6>
+                <p class="text-muted mb-0">Lunes a Sábado: 8:00 AM - 8:00 PM<br>Domingos: 9:00 AM - 4:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. PIE DE PÁGINA (FOOTER) -->
+  <footer class="py-5">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        
+        <div class="col-md-5">
+          <h4 class="text-white brand-font mb-3">Katherin Pasteleria</h4>
+          <p class="text-white-50 pe-md-4">
+            Calidad, amor y el toque dulce que toda celebración necesita.
+          </p>
+        </div>
+
+        <div class="col-md-3">
+          <h6 class="text-white fw-bold mb-3">Navegación</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#catalogo">Catálogo</a></li>
+            <li><a href="#nosotros">Sobre Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="text-white fw-bold mb-3">Síguenos en Redes</h6>
+          <p class="text-white-50">Descubre nuestros nuevos diseños diarios en redes sociales:</p>
+          <div class="d-flex gap-3">
+            <a href="https://www.instagram.com/katy300989/?hl=es" target="_blank" class="fs-4" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/katherin.elizabeth.solis.calle" target="_blank" class="fs-4" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.tiktok.com/@katherin.elizabet717" target="_blank" class="fs-4" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="border-secondary opacity-25">
+      <div class="text-center pt-2 text-white-50 small">
+        &copy; 2026 Katherin Pasteleria. Todos los derechos reservados.
+        <nav>Desarrollado por. Ing Ivan Quiroz</nav>
+      </div>
+    </div>
+  </footer>
+  <!-- Bootstrap 5.3 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Archivo JS externo -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+
